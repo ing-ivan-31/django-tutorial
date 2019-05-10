@@ -19,10 +19,17 @@ Previously you need create the folder _articles_  inside api
 
 docker-compose run web sh -c "django-admin.py startapp articles ./articles"
 
+**Make new Migrations**
+ 
+ docker-compose run  web sh -c "python manage.py makemigrations"
 
-**Applying Migrations**
+**Run Migrations**
  
  docker-compose run  web sh -c "python manage.py migrate"
+ 
+ **Interactive Shell for ORM (like thinker)**
+ 
+  docker-compose run  web sh -c "python manage.py shell"
  
 **Add Super User Password: secret1234**
  
