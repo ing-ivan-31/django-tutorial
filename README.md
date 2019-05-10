@@ -7,17 +7,17 @@ docker-compose build
 
 **Start Project to app folder**
 
- docker-compose run web sh -c "django-admin.py startproject api ."
+ docker-compose run web sh -c "django-admin.py startproject djangonautic ."
  
 **Add modules to project**
 
-docker-compose run web sh -c "django-admin.py startapp api ."
+docker-compose run web sh -c "django-admin.py startapp djangonautic ."
 
 **or**
 
-Previously you need create the folder _users_  inside api
+Previously you need create the folder _articles_  inside api
 
-docker-compose run web sh -c "django-admin.py startapp users ./api/users"
+docker-compose run web sh -c "django-admin.py startapp articles ./articles"
 
 
 **Applying Migrations**
