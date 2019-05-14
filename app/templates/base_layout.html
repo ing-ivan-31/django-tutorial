@@ -7,8 +7,20 @@
     <link rel="stylesheet" href="{% static 'styles.css' %}">
 </head>
 <body>
-    <div class="wrapper">
+    <header class="wrapper">
         <h1><a href="{% url 'list' %}"><img src="{% static 'logo.png' %}" alt=""></a></h1>
+        <nav style="display:flex; justify-content:end">
+            <ul>
+                <li>
+                    <form action="{% url 'accounts:logout' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit">Logout</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper">
         {% block content %}
         {% endblock%}
     </div>
